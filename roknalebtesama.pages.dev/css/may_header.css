@@ -1,0 +1,672 @@
+@import url('https://fonts.googleapis.com/css2?family=Cairo:wght@400;700&family=Tajawal:wght@400;700&display=swap');
+
+
+:root {
+    --primaryColor: #022a32;
+    --middleColor: #393E46;
+    --helperColor: #737373;
+    --lightHelper: #58585A;
+    --hrColor:#09a99d;
+    --transparentColor: rgba(0, 0, 0, 0.699);
+    --shadow: rgba(189, 188, 188, 0.514);
+    /* --------------------------------- */
+    --whatsappColor: #25D366;
+    --white: #ffff;
+    --blue: #1877F2;
+    --green: #25D366;
+    --gray: #f8f8f8;
+    --container-width: 1340px;
+    --header-height: 90px;
+    /* 👈 غيّر الرقم حسب الارتفاع اللي تحبه */
+
+}
+body::-webkit-scrollbar {
+    width: 5px;
+}
+
+body::-webkit-scrollbar-track {
+    background-color: transparent
+}
+
+body::-webkit-scrollbar-thumb {
+    background-color: var(--lightHelper);
+    background-image: linear-gradient(0deg, var(--lightHelper) 0%, var(--helperColor) 100%);
+    border-radius: 5px
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Cairo', 'Tajawal', sans-serif;
+}
+
+a {
+    text-decoration: none;
+    transition: all 0.5s;
+
+}
+
+ul {
+    list-style: none;
+}
+
+.container {
+    max-width: var(--container-width);
+    margin: 0 auto;
+    padding: 0 18px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.company-name{
+    color: var(--helperColor);
+    display: none;
+}
+/* Top Bar */
+.top-bar {
+    background: rgba(0, 0, 0, 0.24);
+    border-bottom: 1px solid rgba(0, 0, 0, 0.075);
+    font-size: 1rem;
+    padding: 10px 0;
+    position: relative;
+    z-index: 10000000;
+    backdrop-filter: blur(10px);
+}
+
+.top-bar .top-left .socials a {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    color: var(--lightHelper);
+    background-color: var(--white);
+    padding: 3px 10px;
+    border-radius: 25px;
+    text-decoration: none;
+    font-size: 1.1rem;
+    transition: all 0.5s;
+    font-weight: 600;
+}
+
+.top-bar .top-left .socials a:hover {
+    color: var(--white);
+    background-color: var(--lightHelper);
+}
+
+.top-bar .top-right {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+}
+
+.socials a {
+    margin-left: 10px;
+    color: var(--lightHelper);
+    background-color: var(--white);
+    padding: 3px 10px;
+    border-radius: 50%;
+    text-decoration: none;
+}
+
+.socials a:hover {
+    color: var(--white);
+    background-color: var(--lightHelper);
+}
+
+/* Main Header */
+.main-header {
+    position: fixed;
+    inset: 0 0 auto 0;
+    /* top:0; left:0; right:0 */
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 190px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 20px;
+    background: transparent;
+    /* شفاف في الحالة الابتدائية */
+    color: var(--white);
+    transition: background rgb(255, 255, 255) ease, color var(--white) ease, box-shadow var(--transparentColor) ease;
+    backdrop-filter: none;
+    z-index: 9999999;
+}
+
+.main-header.scrolled {
+    color: rgb(255, 255, 255);
+    height: 90px;
+    z-index: 999999;
+    box-shadow: 0 6px 18px rgba(2, 6, 23, 0.35);
+    background-color: #fff;
+    backdrop-filter: blur(20px);
+}
+.main-header.scrolled .nav-links a{
+    background-color: var(--helperColor);
+    color: var(--white);
+   
+}
+
+
+
+.header-inner {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 12px 0;
+}
+
+.brand {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+}
+
+.logo {
+    width: 100px;
+    height: 100px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.logo img {
+    width: 70%;
+}
+
+.nav-links {
+    border-radius: 15px;
+    display: flex;
+    align-items: center;
+    justify-items: center;
+    gap: 10px;
+
+}
+
+.nav-links a {
+    text-decoration: none;
+    color: var(--white);
+    font-weight: 500;
+    padding: 8px 20px;
+    background-color: var(--helperColor);
+    border-radius: 20px;
+    transition: all 0.8s;
+}
+
+.nav-links a.active {
+    background-image: linear-gradient(90deg, var(--lightHelper) 0%, var(--primaryColor) 100%);
+    color: var(--white) !important;
+}
+
+.nav-links a:hover {
+    background-image: linear-gradient(90deg, var(--lightHelper) 0%, var(--primaryColor) 100%);
+}
+
+.dropdown {
+    position: relative;
+}
+
+.dropdown button {
+    background: transparent;
+    border: none;
+    cursor: pointer;
+    font-size: 0.9rem;
+    color: inherit;
+    /* يخلي السهم ياخد لون النص */
+}
+
+.dropdown-menu {
+    width: 200px;
+    flex-direction: column;
+    background: var(--helperColor);
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    /* padding: 10px; */
+    position: absolute;
+    top: 100%;
+    left: 0;
+    /* z-index: 10000; */
+    max-height: 0px;
+        overflow: scroll;
+   
+    
+    /* مخفي زي ستارة */
+    transition:all 0.7s ease-in-out;
+}
+
+
+/* ----- تحسين عام (Firefox) ----- */
+.dropdown-menu {
+    /* Firefox: حجم دقيق و لون الإبهام/المسار */
+    scrollbar-width: thin;
+    scrollbar-color: var(--lightHelper) transparent;
+    /* يمنع تحريك المحتوى عند ظهور/اختفاء الشريط */
+    scrollbar-gutter: stable;
+  }
+  
+  /* ----- WebKit (Chrome / Edge / Safari) ----- */
+  .dropdown-menu::-webkit-scrollbar {
+    width: 8px;
+    height: 8px;
+  }
+  
+  .dropdown-menu::-webkit-scrollbar-track {
+    background: transparent;
+    border-radius: 8px;
+  }
+  
+  .dropdown-menu::-webkit-scrollbar-thumb {
+    background-image: linear-gradient(180deg, var(--lightHelper) 0%, var(--helperColor) 100%);
+    border-radius: 6px;
+    min-height: 28px;               /* مساحة قابلة للسحب افضل */
+    border: 2px solid transparent;  /* للحفاظ على المساحة من الداخل */
+    background-clip: padding-box;
+    box-shadow: inset 0 0 0 1px rgba(0,0,0,0.04);
+    transition: transform .12s ease, box-shadow .12s ease, background-image .12s ease;
+  }
+  
+  /* تفاعل عند المرور بالفأرة / عند السحب */
+  .dropdown-menu:hover::-webkit-scrollbar-thumb,
+  .dropdown-menu::-webkit-scrollbar-thumb:hover {
+    transform: scale(1.05);
+    box-shadow: inset 0 0 0 1px rgba(0,0,0,0.08);
+  }
+  
+  .dropdown-menu::-webkit-scrollbar-thumb:active {
+    transform: scale(0.98);
+  }
+  
+  /* ----- خيار للجوال: إخفاء الشريط على الشاشات اللمسية (اختياري) ----- */
+  /* 
+  @media (hover: none) and (pointer: coarse) {
+    .dropdown-menu { scrollbar-width: none; -ms-overflow-style: none; }
+    .dropdown-menu::-webkit-scrollbar { width: 0; height: 0; }
+  }
+  */
+  
+  
+  /* ----- وصولية: تحديد مرئي عند التنقل بالكيبورد ----- */
+  .dropdown-menu:focus-visible {
+    outline: 3px solid rgba(10,111,174,0.18);
+    outline-offset: 2px;
+  }
+  
+
+.dropdown.open .dropdown-menu {
+    max-height: 650px;
+    z-index: 99999999999;
+    /* تنزل لتحت زي الستارة */
+}
+
+
+
+.dropdown-menu::-webkit-scrollbar {
+    display: none;
+}
+
+.dropdown-menu li a {
+    background-color: var(--white);
+    display: block;
+    color: var(--helperColor);
+    padding: 10px 5px;
+    text-decoration: none;
+    border-radius: 0px;
+    border-bottom: var(--primaryColor) 1px dashed;
+}
+
+
+.dropdown-menu li a:hover {
+    color: var(--white);
+    border-radius: 0px;
+    background-color: var(--helperColor);
+}
+
+.header-actions {
+    display: none;
+    align-items: center;
+    gap: 12px;
+    width: 70px;
+    height: 40px;
+    background-color: var(--white);
+    border-radius: 50%;
+    font-size: 30px;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    transition: all 0.3s;
+}
+.hamburger {
+    display: flex;
+    display: none; /* مخفي في الحالة العادية */
+    flex-direction: column;
+    justify-content: center;
+    gap: 5px;
+    width: 30px;
+    height: 24px;
+    background: transparent;
+    border: none;
+    cursor: pointer;
+    z-index: 100000; /* علشان يفضل فوق */
+    position: relative;
+  }
+  
+  .hamburger span {
+    display: block;
+    width: 100%;
+    height: 3px;
+    background-image: linear-gradient(90deg, var(--lightHelper) 0%, var(--primaryColor) 100%);
+    border-radius: 2px;
+    transition: all 0.4s ease;
+  }
+  
+  /* عند الضغط (يتحول إلى X) */
+  .hamburger.active span:nth-child(1) {
+    transform: rotate(45deg) translate(5px, 5px);
+  }
+  
+  .hamburger.active span:nth-child(2) {
+    opacity: 0; /* يختفي */
+  }
+  
+  .hamburger.active span:nth-child(3) {
+    transform: rotate(-45deg) translate(6px, -6px);
+  }
+  
+/* ========== responsive additions for style.css ========== */
+
+/* Desktop wide — adjust header height */
+@media (max-width: 1200px) {
+    .container {
+        padding: 0 14px;
+    }
+
+    .logo {
+        width: 100px;
+        height: 100px;
+    }
+}
+
+/* Medium screens: collapse spacing, reduce header height */
+@media (max-width: 1023px) {
+    :root {
+        --header-height: 180px;
+    }
+
+    .main-header {
+        height: 180px;
+        padding: 0 14px;
+    }
+
+    .nav-links a {
+        padding: 6px 12px;
+        font-size: 14px;
+    }
+}
+
+/* Small tablets & large phones */
+@media (max-width: 900px) {
+    /* Top Bar */
+.top-bar {
+  
+    z-index: 10000;
+   
+}
+
+    .container {
+        flex-direction: row;
+    }
+
+    .main-header {
+        height: 200px;
+        padding: 10px 12px;
+    }
+
+    .nav-links {
+        display: flex;
+        gap: 0;
+        flex-direction: column;
+        position: fixed;
+        top: 0;
+        border-radius: 15px 0 0 15px;
+        right: -100%;
+        /* تبدأ مخفية خارج الشاشة */
+        height: 100vh;
+        width: 220px;
+        background: var(--white);
+        color: var(--helperColor);
+        /* padding: 20px; */
+        transition: right 0.8s ease-in-out;
+        z-index: 999999999;
+    }
+
+    .nav-links.show {
+        right: 0;
+       
+    }
+
+    .nav-links a {
+        border-bottom: 1px dashed var(--primaryColor);
+        padding: 1px;
+        border-radius: 0;
+        color: var(--helperColor);
+       background-color: var(--white);
+        display: block;
+        text-align: right;
+    }
+    .nav-links a.nav-links a:hover {
+      
+        border-radius: 0;
+       
+    }
+
+    .hamburger {
+        display: flex;
+    }
+
+    .brand {
+        gap: 8px;
+    }
+
+    .logo {
+         width: 84px;
+        /* height: 90px; */
+    }
+
+    .dropdown-menu {
+        width: 100%;
+    }
+    .dropdown-menu li a {
+        background-color: #F8F5FF;
+        border-bottom: 1px dashed var(--primaryColor);
+        
+    }
+
+.nav-links a:hover {
+    border-radius: 0;
+    background-image: linear-gradient(90deg, var(--lightHelper) 0%, var(--primaryColor) 100%);
+}
+.header-actions {
+    display: flex;}
+    .top-bar .container {
+        justify-content: center;
+    }
+    .company-name{
+        color: var(--primaryColor);
+        display: flex;
+        width: 500px;
+        font-size: 20px;
+        font-weight: 600;
+    }
+}
+
+/* Phones */
+@media (max-width: 576px) {
+    .container {
+        padding: 0 0px;
+        justify-content: space-between;
+    }
+
+    .header-inner {
+        align-items: start !important;
+
+    }
+
+    .nav-links a {
+        font-size: 15px;
+        padding: 10px 0px;
+    }
+
+    .top-bar {
+        font-size: 0.85rem;
+        padding: 8px 0;
+    }
+
+    .top-bar .top-left a {
+        margin-left: 8px;
+    }
+
+    .socials a {
+        display: none;
+    }
+
+    .main-header {
+        margin-top: 50px;
+        height: 90px;
+        padding: 0 30px;
+    }
+
+    .main-header.scrolled {
+        margin-top: 0;
+        height: 80px;
+    }
+
+    .main-header.scrolled .nav-links {
+        top: 100%;
+        background-color: var(--helperColor);
+    }
+
+    .dropdown {
+        width: 100%;
+        
+    }
+
+    .nav-links a {
+        width: 100%;
+        padding-inline: 10px;
+    }
+
+    .dropdown-menu {
+        width: 100%;
+        clip-path: inset(0 0 0 0);
+    }
+    .dropdown-menu li a {
+        background-color: #F8F5FF;
+        border-bottom: 1px dashed var(--primaryColor);
+        
+    }
+    .main-header.scrolled .dropdown-menu li a {
+        background-color: #86399f38;
+        border-bottom: 1px dashed var(--primaryColor);
+        
+    }
+    
+}
+
+@media (max-width: 900px) {
+  .header-div {
+    position: relative;
+    z-index: 9999999;
+  }
+
+  .main-header {
+    position: fixed !important;
+    top: 0 !important;
+    left: 0 !important;
+    right: 0 !important;
+    height: 70px !important;
+    margin-top: 0 !important;
+    background-color: rgba(2, 42, 50, 0.95) !important;
+    backdrop-filter: blur(12px) !important;
+    padding: 0 16px !important;
+    display: flex !important;
+    align-items: center !important;
+  }
+
+  .main-header.scrolled {
+    height: 60px !important;
+    margin-top: 0 !important;
+    background-color: #fff !important;
+  }
+
+  .header-inner {
+    padding: 0 !important;
+    align-items: center !important;
+    height: 100% !important;
+  }
+
+  .logo {
+    width: 60px !important;
+    height: 60px !important;
+  }
+
+  .logo img {
+    width: 100% !important;
+    height: 100% !important;
+    object-fit: contain !important;
+  }
+
+  /* push body content below fixed header */
+  body {
+    padding-top: 70px;
+  }
+
+  .top-bar {
+    position: relative;
+    z-index: 10001;
+  }
+
+  .company-name {
+    font-size: 16px !important;
+    width: auto !important;
+    flex: 1 !important;
+    text-align: center !important;
+    color: #fff !important;
+    display: flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+  }
+
+  .main-header.scrolled .company-name {
+    color: var(--primaryColor) !important;
+  }
+
+  .hamburger {
+    display: flex !important;
+  }
+
+  .header-actions {
+    display: flex !important;
+    width: 44px !important;
+    height: 44px !important;
+    font-size: 20px !important;
+    background: transparent !important;
+  }
+}
+
+@media (max-width: 576px) {
+  .main-header {
+    height: 64px !important;
+    padding: 0 12px !important;
+  }
+
+  body {
+    padding-top: 64px;
+  }
+
+  .logo {
+    width: 52px !important;
+    height: 52px !important;
+  }
+}

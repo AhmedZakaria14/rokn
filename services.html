@@ -1,0 +1,389 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="خدمات عزل الأسطح والخزانات والحمامات والمطابخ في حائل — شركة ركن الابتسامة، خبرة أكثر من 15 عامًا.">
+  <title>خدماتنا | شركة ركن الابتسامة لعزل الأسطح بحائل</title>
+  <link rel="icon" href="./roknalebtesama.pages.dev/img/logo-web.png" type="image/x-icon">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@200..1000&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="./roknalebtesama.pages.dev/css/may_header.css">
+  <link rel="stylesheet" href="./roknalebtesama.pages.dev/css/may_about.css">
+  <link rel="stylesheet" href="./roknalebtesama.pages.dev/css/may_Achievements.css">
+  <link rel="stylesheet" href="./roknalebtesama.pages.dev/css/may_whyus.css">
+  <link rel="stylesheet" href="./roknalebtesama.pages.dev/css/may_contact.css">
+  <link rel="stylesheet" href="./roknalebtesama.pages.dev/css/mayaside_contact.css">
+  <link rel="stylesheet" href="./roknalebtesama.pages.dev/css/may_footer.css">
+  <link rel="stylesheet" href="./roknalebtesama.pages.dev/css/may_services.css">
+  <link rel="stylesheet" href="./roknalebtesama.pages.dev/css/mayhero.css">
+  <style>
+    :root { --primaryColor:#022a32; --middleColor:#393E46; --helperColor:#737373; --lightHelper:#58585A; --hrColor:#09a99d; --white:#fff; --blue:#1877F2; --green:#25D366; --gray:#f8f8f8; }
+    /* ===== Page Hero ===== */
+    .page-hero { background:linear-gradient(135deg,var(--primaryColor) 0%,var(--middleColor) 60%,var(--helperColor) 100%); padding:200px 20px 80px; text-align:center; color:#fff; position:relative; overflow:hidden; }
+    .page-hero::before { content:""; position:absolute; inset:0; background:url('./roknalebtesama.pages.dev/img/hero-bg1.png') center/cover no-repeat; opacity:0.12; }
+    .page-hero-inner { position:relative; z-index:1; }
+    .page-hero h1 { font-size:clamp(26px,5vw,50px); font-weight:900; margin-bottom:14px; }
+    .page-hero p { font-size:clamp(15px,2.5vw,20px); opacity:.9; max-width:700px; margin:0 auto; }
+    .breadcrumb { display:flex; align-items:center; justify-content:center; gap:8px; margin-bottom:18px; font-size:14px; opacity:.8; }
+    .breadcrumb a { color:#fff; } .breadcrumb span { opacity:.6; }
+    /* ===== Section Title ===== */
+    .section-title { text-align:center; margin-bottom:50px; }
+    .section-title h2 { font-size:clamp(24px,4vw,42px); font-weight:800; color:var(--primaryColor); position:relative; display:inline-block; padding-bottom:12px; }
+    .section-title h2::after { content:""; position:absolute; bottom:0; right:50%; transform:translateX(50%); width:80px; height:4px; background:linear-gradient(90deg,var(--hrColor),var(--primaryColor)); border-radius:2px; }
+    .section-title p { font-size:17px; color:var(--helperColor); margin-top:12px; }
+    /* ===== Features Cards ===== */
+    .features-section { padding:80px 20px; background:#f8f9fa; }
+    .features-grid { display:grid; grid-template-columns:repeat(auto-fit,minmax(270px,1fr)); gap:26px; max-width:1200px; margin:0 auto; }
+    .feature-card { background:#fff; border-radius:16px; padding:34px 26px; text-align:center; box-shadow:0 6px 24px rgba(0,0,0,.07); transition:transform .3s,box-shadow .3s; border-top:4px solid var(--hrColor); }
+    .feature-card:hover { transform:translateY(-6px); box-shadow:0 12px 32px rgba(0,0,0,.12); }
+    .feature-icon { width:68px; height:68px; background:linear-gradient(135deg,var(--primaryColor),var(--helperColor)); border-radius:50%; display:flex; align-items:center; justify-content:center; margin:0 auto 18px; font-size:26px; color:#fff; }
+    .feature-card h3 { font-size:19px; font-weight:700; color:var(--primaryColor); margin-bottom:10px; }
+    .feature-card p { font-size:14px; color:var(--helperColor); line-height:1.7; }
+    /* ===== Service Hero Detail ===== */
+    .service-detail { padding:70px 20px; background:#fff; }
+    .service-detail-inner { display:flex; gap:50px; align-items:center; max-width:1200px; margin:0 auto; }
+    .service-detail-text { flex:1; }
+    .service-detail-text h2 { font-size:clamp(24px,3.5vw,38px); font-weight:800; color:var(--primaryColor); margin-bottom:18px; position:relative; padding-bottom:10px; }
+    .service-detail-text h2::after { content:""; position:absolute; bottom:0; right:0; width:60px; height:4px; background:var(--hrColor); border-radius:2px; }
+    .service-detail-text p { font-size:17px; color:#333; line-height:1.8; margin-bottom:16px; }
+    .service-detail-text ul { margin: 16px 0; padding-right:0; }
+    .service-detail-text ul li { font-size:16px; color:#333; margin-bottom:10px; padding:10px 16px; background:#f0fafa; border-radius:8px; border-right:4px solid var(--hrColor); }
+    .service-detail-img { flex:1; border-radius:20px; overflow:hidden; box-shadow:0 12px 40px rgba(0,0,0,.12); }
+    .service-detail-img img { width:100%; height:420px; object-fit:cover; display:block; }
+    @media(max-width:900px){.service-detail-inner{flex-direction:column;} .service-detail-img{width:100%;} .service-detail-text h2::after{right:50%;transform:translateX(50%);} .service-detail-text{text-align:center;} .service-detail-text ul li{text-align:right;}}
+    /* ===== Steps ===== */
+    .steps-section { padding:70px 20px; background:#f8f9fa; }
+    .steps-grid { display:grid; grid-template-columns:repeat(auto-fit,minmax(220px,1fr)); gap:26px; max-width:1100px; margin:0 auto; }
+    .step-card { background:#fff; border-radius:14px; padding:30px 22px; text-align:center; box-shadow:0 4px 18px rgba(0,0,0,.06); position:relative; }
+    .step-num { width:50px; height:50px; background:var(--primaryColor); color:#fff; border-radius:50%; font-size:22px; font-weight:900; display:flex; align-items:center; justify-content:center; margin:0 auto 16px; }
+    .step-card h3 { font-size:17px; font-weight:700; color:var(--primaryColor); margin-bottom:8px; }
+    .step-card p { font-size:14px; color:var(--helperColor); line-height:1.6; }
+    /* ===== CTA Strip ===== */
+    .cta-strip { background:linear-gradient(135deg,var(--primaryColor),var(--middleColor)); padding:60px 20px; text-align:center; color:#fff; }
+    .cta-strip h2 { font-size:clamp(20px,4vw,36px); font-weight:800; margin-bottom:14px; }
+    .cta-strip p { font-size:17px; opacity:.9; margin-bottom:28px; }
+    .cta-btn { display:inline-flex; align-items:center; gap:10px; background:#25D366; color:#fff; font-size:17px; font-weight:700; padding:15px 36px; border-radius:50px; text-decoration:none; transition:transform .3s,box-shadow .3s; }
+    .cta-btn:hover { transform:translateY(-3px); box-shadow:0 8px 24px rgba(37,211,102,.4); }
+    /* ===== Contact Page ===== */
+    .contact-page-section { padding:70px 20px; background:#fff; }
+    .contact-cards-grid { display:grid; grid-template-columns:repeat(auto-fit,minmax(260px,1fr)); gap:28px; max-width:1000px; margin:0 auto 60px; }
+    .contact-card { background:#fff; border-radius:16px; padding:40px 28px; text-align:center; box-shadow:0 6px 28px rgba(0,0,0,.08); border-top:4px solid var(--hrColor); transition:transform .3s; }
+    .contact-card:hover{transform:translateY(-5px);}
+    .contact-card-icon { width:72px; height:72px; border-radius:50%; background:linear-gradient(135deg,var(--primaryColor),var(--helperColor)); color:#fff; font-size:28px; display:flex; align-items:center; justify-content:center; margin:0 auto 18px; }
+    .contact-card h3 { font-size:20px; font-weight:700; color:var(--primaryColor); margin-bottom:12px; }
+    .contact-card a { font-size:18px; font-weight:600; color:var(--helperColor); display:block; margin-top:6px; }
+    .contact-card a:hover { color:var(--primaryColor); }
+    /* ===== About Values ===== */
+    .values-strip { background:var(--primaryColor); color:#fff; padding:60px 20px; text-align:center; }
+    .values-strip h2 { font-size:clamp(22px,4vw,38px); font-weight:800; margin-bottom:40px; }
+    .values-grid { display:grid; grid-template-columns:repeat(auto-fit,minmax(200px,1fr)); gap:26px; max-width:1000px; margin:0 auto; }
+    .value-item { padding:26px 18px; background:rgba(255,255,255,.1); border-radius:14px; }
+    .value-num { font-size:52px; font-weight:900; color:var(--hrColor); line-height:1; margin-bottom:6px; }
+    .value-label { font-size:17px; font-weight:700; margin-bottom:5px; }
+    .value-desc { font-size:13px; opacity:.8; }
+    /* ===== Services Page Grid ===== */
+    .services-full-grid { display:grid; grid-template-columns:repeat(auto-fit,minmax(300px,1fr)); gap:30px; max-width:1200px; margin:0 auto; padding:0 20px; }
+    .service-full-card { background:#fff; border-radius:16px; overflow:hidden; box-shadow:0 6px 28px rgba(0,0,0,.08); transition:transform .3s,box-shadow .3s; }
+    .service-full-card:hover{transform:translateY(-6px); box-shadow:0 14px 40px rgba(0,0,0,.14);}
+    .service-full-card img { width:100%; height:230px; object-fit:cover; display:block; }
+    .service-full-card-body { padding:28px 24px; }
+    .service-full-card-body h3 { font-size:21px; font-weight:800; color:var(--primaryColor); margin-bottom:12px; }
+    .service-full-card-body p { font-size:15px; color:var(--helperColor); line-height:1.7; margin-bottom:18px; }
+    .service-link-btn { display:inline-flex; align-items:center; gap:8px; background:var(--primaryColor); color:#fff; font-size:14px; font-weight:700; padding:10px 22px; border-radius:30px; text-decoration:none; transition:background .3s; }
+    .service-link-btn:hover { background:var(--helperColor); }
+  
+    /* ===== Mobile Hero Fix ===== */
+    @media (max-width: 900px) {
+      body { padding-top: 70px; }
+      .page-hero { padding: 60px 16px 40px !important; }
+      .page-hero h1 { font-size: clamp(22px,5vw,38px) !important; }
+      .page-hero p { font-size: 15px !important; }
+    }
+    @media (max-width: 576px) {
+      body { padding-top: 64px; }
+      .page-hero { padding: 50px 12px 34px !important; }
+      .page-hero h1 { font-size: 20px !important; }
+    }
+    /* ===== Mobile Service Detail Fix ===== */
+    @media (max-width: 576px) {
+      .service-detail-inner { flex-direction: column !important; gap: 20px !important; }
+      .service-detail-img { width: 100% !important; }
+      .service-detail-img img { height: 240px !important; }
+      .features-grid { grid-template-columns: 1fr 1fr !important; gap: 14px !important; }
+      .feature-card { padding: 20px 14px !important; }
+      .steps-grid { grid-template-columns: 1fr 1fr !important; gap: 14px !important; }
+      .services-full-grid { grid-template-columns: 1fr !important; }
+      .contact-cards-grid { grid-template-columns: 1fr !important; }
+      .values-grid { grid-template-columns: 1fr 1fr !important; }
+    }
+
+  </style>
+  <link rel="canonical" href="https://roknalebtesama.com/services.html">
+  <meta name="robots" content="index, follow">
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    {
+      "@type": "ListItem",
+      "position": 1,
+      "name": "الرئيسية",
+      "item": "https://roknalebtesama.com/"
+    },
+    {
+      "@type": "ListItem",
+      "position": 2,
+      "name": "خدماتنا",
+      "item": "https://roknalebtesama.com/services.html"
+    }
+  ]
+}
+</script>
+<link rel="stylesheet" href="./roknalebtesama.pages.dev/css/mobile_fixes.css">
+</head>
+<body>
+  <div class="top-bar">
+    <div class="container">
+      <div class="top-right">
+        <nav class="socials">
+          <a href="https://wa.me/966574135600"><i class="fa-brands fa-whatsapp"></i></a>
+        </nav>
+      </div>
+      <div class="top-left">
+        <nav class="socials">
+          <a href="tel:0574135600">0574135600<i class="fa-solid fa-phone"></i></a>
+        </nav>
+      </div>
+    </div>
+  </div>
+  <div class="header-div">
+    <header class="main-header" id="site-header">
+      <div class="container header-inner">
+        <div class="brand">
+          <a href="index.html">
+            <div class="logo"><img src="./roknalebtesama.pages.dev/img/logo-web.png" alt="شعار ركن الابتسامة"></div>
+          </a>
+        </div>
+        <nav class="nav-links">
+          <a href="./index.html">الرئيسية</a>
+          <a href="./about.html">عنا</a>
+          <a href="./contact.html">اتصل بنا</a>
+          <div class="dropdown">
+            <a href="./services.html" class="active">خدماتنا ▼</a>
+            <ul class="dropdown-menu">
+              <li><a href="./عزل-الاسطح.html">عزل الأسطح بالفوم (عزل مائي وحراري)</a></li>
+              <li><a href="./عزل-خزانات.html">عزل خزانات المياه ومعالجة التسربات</a></li>
+              <li><a href="./عزل-حمامات.html">عزل حمامات ضد تسرب المياه والرطوبة</a></li>
+              <li><a href="./عزل-مطابخ.html">عزل مطابخ وحماية من التسريبات</a></li>
+            </ul>
+          </div>
+        </nav>
+      </div>
+      <div class="company-name"><p>ركن الابتسامة</p></div>
+      <div class="header-actions">
+        <button class="hamburger" id="hamburger" aria-label="قائمة">
+          <span></span><span></span><span></span>
+        </button>
+      </div>
+    </header>
+  </div>
+
+  <section class="page-hero">
+    <div class="page-hero-inner">
+      <div class="breadcrumb">
+        <a href="index.html">الرئيسية</a>
+        <span>/</span>
+        <span>خدماتنا</span>
+      </div>
+      <h1>خدماتنا في العزل بحائل</h1>
+      <p>نقدم جميع خدمات العزل المائي والحراري بجودة عالية وضمان معتمد في مدينة حائل</p>
+    </div>
+  </section>
+
+  <section style="padding:70px 20px 80px; background:#f8f9fa;">
+    <div class="section-title"><h2>خدماتنا في العزل</h2><p>نقدم جميع خدمات العزل المائي والحراري في مدينة حائل بأعلى مستوى من الجودة والضمان</p></div>
+    <div class="services-full-grid">
+      <div class="service-full-card">
+        <img src="./roknalebtesama.pages.dev/img/azl-as-sath.jpeg" alt="عزل أسطح بحائل بالفوم">
+        <div class="service-full-card-body">
+          <h3>عزل الأسطح بالفوم</h3>
+          <p>حماية شاملة للأسطح من تسربات المياه والحرارة باستخدام فوم البولي يوريثان بأحدث تقنيات الرش مع ضمان طويل الأمد.</p>
+          <a href="عزل-الاسطح.html" class="service-link-btn">اقرأ أكثر <i class="fa-solid fa-arrow-left"></i></a>
+        </div>
+      </div>
+      <div class="service-full-card">
+        <img src="./roknalebtesama.pages.dev/img/azl-khazanat.jpeg" alt="عزل خزانات بحائل">
+        <div class="service-full-card-body">
+          <h3>عزل خزانات المياه</h3>
+          <p>عزل الخزانات الأرضية والعلوية بمواد آمنة معتمدة تمنع تسرب المياه وتحافظ على نظافتها وجودتها لفترات طويلة.</p>
+          <a href="عزل-خزانات.html" class="service-link-btn">اقرأ أكثر <i class="fa-solid fa-arrow-left"></i></a>
+        </div>
+      </div>
+      <div class="service-full-card">
+        <img src="./roknalebtesama.pages.dev/img/azl-hamamat.jpeg" alt="عزل حمامات بحائل">
+        <div class="service-full-card-body">
+          <h3>عزل الحمامات</h3>
+          <p>عزل احترافي للحمامات قبل وبعد البلاط لمنع تسرب المياه وحماية الجدران والأرضيات من الرطوبة والتشققات.</p>
+          <a href="عزل-حمامات.html" class="service-link-btn">اقرأ أكثر <i class="fa-solid fa-arrow-left"></i></a>
+        </div>
+      </div>
+      <div class="service-full-card">
+        <img src="./roknalebtesama.pages.dev/img/azl-matabekh.jpeg" alt="عزل مطابخ بحائل">
+        <div class="service-full-card-body">
+          <h3>عزل المطابخ</h3>
+          <p>عزل مطابخ بأحدث المواد المقاومة للرطوبة والتسربات لضمان حماية كاملة للبنية التحتية ومنع أي تلف مستقبلي.</p>
+          <a href="عزل-مطابخ.html" class="service-link-btn">اقرأ أكثر <i class="fa-solid fa-arrow-left"></i></a>
+        </div>
+      </div>
+    </div>
+  </section>
+  <section class="Achievements-section">
+    <div class="rts-counter-list">
+      <div class="rts-counter-list-inner"><div class="counter-icon"><img src="./roknalebtesama.pages.dev/img/khebrah.svg" alt="خبرة"></div><div class="count-text"><div class="count-number"><span data-letters="15" class="rs-counter">15</span><span class="prefix">+</span></div></div></div>
+      <div class="text">خبرة أكثر من <strong>15 عامًا</strong> في تنفيذ أعمال العزل المائي والحراري وعزل الأسطح بالفوم.</div>
+    </div>
+    <div class="rts-counter-list">
+      <div class="rts-counter-list-inner"><div class="counter-icon"><img src="./roknalebtesama.pages.dev/img/masharie.svg" alt="مشاريع"></div><div class="count-text"><div class="count-number"><span data-letters="3200" class="rs-counter">3200</span><span class="prefix">+</span></div></div></div>
+      <div class="text">تنفيذ أكثر من <strong>3200 مشروع عزل</strong> في فلل ومباني سكنية وتجارية.</div>
+    </div>
+    <div class="rts-counter-list">
+      <div class="rts-counter-list-inner"><div class="counter-icon"><img src="./roknalebtesama.pages.dev/img/omala.svg" alt="عملاء"></div><div class="count-text"><div class="count-number"><span data-letters="2800" class="rs-counter">2800</span><span class="prefix">+</span></div></div></div>
+      <div class="text">أكثر من <strong>2800 عميل راضٍ</strong> وثقوا بنا لحماية منازلهم.</div>
+    </div>
+    <div class="rts-counter-list">
+      <div class="rts-counter-list-inner"><div class="counter-icon"><img src="./roknalebtesama.pages.dev/img/daman.svg" alt="ضمان"></div><div class="count-text"><div class="count-number"><span data-letters="10" class="rs-counter">10</span><span class="prefix">+</span></div></div></div>
+      <div class="text">ضمان يصل إلى <strong>10 سنوات</strong> على أعمال العزل حسب نوع الخدمة.</div>
+    </div>
+  </section>  <section class="features-section">
+    <div class="section-title"><h2>مميزات الخدمة</h2></div>
+    <div class="features-grid">
+      <div class="feature-card">
+        <div class="feature-icon"><i class="fa-solid fa-shield-halved"></i></div>
+        <h3>ضمان على جميع الأعمال</h3>
+        <p>نقدم ضمانًا مكتوبًا حقيقيًا على جميع خدمات العزل يصل إلى 10 سنوات.</p>
+      </div>
+      <div class="feature-card">
+        <div class="feature-icon"><i class="fa-solid fa-spray-can-sparkles"></i></div>
+        <h3>أحدث تقنيات العزل</h3>
+        <p>نستخدم أحدث معدات وتقنيات الفوم والعزل المائي والحراري المتاحة في السوق.</p>
+      </div>
+      <div class="feature-card">
+        <div class="feature-icon"><i class="fa-solid fa-magnifying-glass"></i></div>
+        <h3>معاينة مجانية</h3>
+        <p>نوفر معاينة مجانية قبل البدء لتحديد أفضل حل عزل مناسب لحالتك.</p>
+      </div>
+      <div class="feature-card">
+        <div class="feature-icon"><i class="fa-solid fa-clock"></i></div>
+        <h3>تنفيذ خلال يوم أو يومين</h3>
+        <p>سرعة الإنجاز مع الجودة في التنفيذ — معظم المشاريع تنتهي في وقت قياسي.</p>
+      </div>
+    </div>
+  </section>
+  <section class="cta-strip">
+    <h2>هل تحتاج عزلاً في حائل؟</h2>
+    <p>تواصل معنا الآن للحصول على معاينة مجانية واستشارة متخصصة</p>
+    <a href="https://wa.me/966574135600" class="cta-btn"><i class="fa-brands fa-whatsapp"></i> تواصل على واتساب — 0574135600</a>
+  </section>
+  <aside>
+    <button id="contactBtn" class="btnsStyle">…</button>
+    <div id="contactContent">
+      <a href="https://wa.me/966574135600" class="aside-link-whats">
+        <span class="contact-word">0574135600</span>
+        <span class="whatsappp btnsStyle"><i class="fa-brands fa-whatsapp"></i></span>
+      </a>
+      <a href="tel:0574135600" class="aside-link-phone">
+        <span class="contact-word">0574135600</span>
+        <span class="phone btnsStyle"><i class="fa-solid fa-phone"></i></span>
+      </a>
+    </div>
+  </aside>
+  <footer class="footer">
+    <section class="upper-footer-container">
+      <div class="footer-section logo-and-intro">
+        <div class="footer-logo">
+          <img src="./roknalebtesama.pages.dev/img/logo-web.png" alt="شعار ركن الابتسامة">
+        </div>
+        <div>
+          <h2>ركن الابتسامة</h2>
+          <p style="color:#ddd; font-size:15px; margin-top:8px; max-width:260px; line-height:1.6;">شركة متخصصة في عزل الأسطح والخزانات والحمامات والمطابخ بحائل.</p>
+        </div>
+      </div>
+    </section>
+    <section class="upper-footer-container">
+      <div class="footer-section">
+        <h3>الصفحات</h3>
+        <ul>
+          <li><a href="index.html">الرئيسية</a></li>
+          <li><a href="about.html">من نحن</a></li>
+          <li><a href="contact.html">تواصل معنا</a></li>
+          <li><a href="services.html">خدماتنا</a></li>
+        </ul>
+      </div>
+      <div class="footer-section">
+        <h3>الخدمات</h3>
+        <ul>
+          <li><a href="عزل-الاسطح.html">عزل الأسطح بالفوم</a></li>
+          <li><a href="عزل-خزانات.html">عزل خزانات المياه</a></li>
+          <li><a href="عزل-حمامات.html">عزل حمامات</a></li>
+          <li><a href="عزل-مطابخ.html">عزل مطابخ</a></li>
+        </ul>
+      </div>
+      <div class="footer-section footer-none">
+        <h3>اتصل بنا</h3>
+        <ul class="contact-list">
+          <li><a href="tel:0574135600" dir="ltr">0574135600</a></li>
+        </ul>
+      </div>
+      <div class="footer-section footer-none">
+        <h3>واتساب</h3>
+        <ul class="contact-list">
+          <li><a href="https://wa.me/966574135600" target="_blank" dir="ltr">0574135600</a></li>
+        </ul>
+      </div>
+      <div class="footer-section">
+        <h3>العنوان</h3>
+        <ul class="contact-list">
+          <li><a href="https://www.google.com/maps?q=Hail,Saudi+Arabia">حائل، المملكة العربية السعودية</a></li>
+        </ul>
+      </div>
+    </section>
+    <div class="footer-bottom">
+      <p>© 2026 ركن الابتسامة — حائل | تصميم وتطوير <a href="https://nasharhub.com" target="_blank" rel="noopener">NasharHub</a></p>
+    </div>
+  </footer>
+  <script src="./roknalebtesama.pages.dev/js/may_header.js"></script>
+  <script>
+    // Counter animation
+    function animateCounter(el) {
+      const target = +el.getAttribute("data-letters");
+      let count = 0; const speed = target / 200;
+      const update = () => { count += speed; if (count < target) { el.innerText = Math.ceil(count); requestAnimationFrame(update); } else { el.innerText = target; } };
+      update();
+    }
+    const counters = document.querySelectorAll(".rs-counter");
+    if (counters.length) {
+      const obs = new IntersectionObserver(entries => { entries.forEach(e => { if (e.isIntersecting) { animateCounter(e.target); obs.unobserve(e.target); } }); }, { threshold: 0.5 });
+      counters.forEach(c => obs.observe(c));
+    }
+    // Accordion
+    document.querySelectorAll(".accordion-item").forEach(item => {
+      const btn = item.querySelector(".accordion-button");
+      if (btn) btn.addEventListener("click", () => {
+        document.querySelectorAll(".accordion-item").forEach(i => i.classList.remove("active"));
+        item.classList.add("active");
+      });
+    });
+    // Aside toggle (desktop)
+    const btn = document.getElementById("contactBtn");
+    const cont = document.getElementById("contactContent");
+    if (btn && cont) {
+      cont.style.display = "none";
+      btn.addEventListener("click", () => { cont.style.display = cont.style.display === "none" ? "flex" : "none"; });
+    }
+  </script>
+</body>
+</html>

@@ -1,0 +1,353 @@
+/* ================================================================
+   MOBILE & RESPONSIVE FIXES
+   يُحمَّل آخر شيء — يُصلح التخطيط فقط بدون تغيير أي محتوى أو صور
+   ================================================================ */
+
+html { overflow-x: hidden; }
+body { overflow-x: hidden; width: 100%; }
+img  { max-width: 100%; }
+
+/* ----------------------------------------------------------------
+   HEADER DESKTOP (> 900px)
+   ---------------------------------------------------------------- */
+@media (min-width: 901px) {
+  body { padding-top: 0; }
+  .main-header { height: 190px; background: transparent; }
+  .main-header.scrolled {
+    height: 90px;
+    background-color: #fff;
+    box-shadow: 0 6px 18px rgba(2,6,23,.35);
+  }
+  .hero { margin-top: 100px; }
+}
+
+/* ----------------------------------------------------------------
+   TABLET + MOBILE (≤ 900px)
+   ---------------------------------------------------------------- */
+@media (max-width: 900px) {
+
+  /* ---- Header ---- */
+  body { padding-top: 64px; }
+
+  .main-header {
+    height: 64px !important;
+    margin-top: 0 !important;
+    padding: 0 16px !important;
+    background-color: rgba(2,42,50,.97) !important;
+    backdrop-filter: blur(12px) !important;
+    display: flex !important;
+    align-items: center !important;
+  }
+  .main-header.scrolled {
+    height: 60px !important;
+    background-color: #fff !important;
+  }
+  .header-inner { padding: 0 !important; align-items: center !important; height: 100% !important; }
+  .logo { width: 52px !important; height: 52px !important; }
+  .logo img { width: 100% !important; height: 100% !important; object-fit: contain !important; }
+
+  .top-bar { position: relative; z-index: 10001; }
+
+  .company-name {
+    display: flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+    font-size: 15px !important;
+    width: auto !important;
+    flex: 1 !important;
+    text-align: center !important;
+    color: #fff !important;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    max-width: 160px;
+  }
+  .main-header.scrolled .company-name { color: var(--primaryColor) !important; }
+
+  .hamburger { display: flex !important; }
+  .header-actions {
+    display: flex !important;
+    width: 44px !important; height: 44px !important;
+    font-size: 20px !important;
+    background: transparent !important;
+  }
+
+  /* ---- Nav sidebar ---- */
+  .nav-links {
+    display: flex !important;
+    flex-direction: column !important;
+    position: fixed !important;
+    top: 0 !important; right: -100% !important;
+    width: 240px !important; height: 100vh !important;
+    background: #fff !important;
+    z-index: 999999999 !important;
+    border-radius: 15px 0 0 15px !important;
+    gap: 0 !important;
+    transition: right .4s ease-in-out !important;
+    overflow-y: auto;
+    padding-top: 70px;
+  }
+  .nav-links.show { right: 0 !important; }
+  .nav-links a {
+    display: block !important;
+    color: var(--helperColor) !important;
+    background-color: #fff !important;
+    border-bottom: 1px dashed var(--primaryColor) !important;
+    border-radius: 0 !important;
+    padding: 12px 16px !important;
+    font-size: 15px !important;
+    text-align: right !important;
+    width: 100% !important;
+  }
+  .dropdown { width: 100% !important; }
+  .dropdown-menu { width: 100% !important; }
+
+  /* ---- Hero ---- */
+  .hero, .hero .slider .slide { background-attachment: scroll !important; }
+  .slide-bg { background-attachment: scroll !important; }
+  .hero { margin-top: 0 !important; }
+  .hero .bg-hero-overlay { padding: 50px 16px !important; }
+  .hero h1 { font-size: 26px !important; margin-block: 12px !important; }
+  .hero p  { font-size: 15px !important; margin-bottom: 12px !important; }
+  .hero .top-quote { font-size: 12px !important; padding: 7px 16px !important; }
+  .hero-overlay a { font-size: 14px !important; padding: 10px 16px !important; width: 90% !important; }
+  .slider-controls { display: flex !important; font-size: 26px !important; }
+  .slider-indicators { display: block !important; }
+
+  /* ---- Services: 2 columns on tablet ---- */
+  .services-section {
+    grid-template-columns: 1fr 1fr !important;
+    gap: 14px !important;
+    max-width: 96% !important;
+    margin: 20px auto !important;
+  }
+  .last-serv { grid-template-columns: 1fr 1fr !important; max-width: 100% !important; }
+
+  /* ---- About ---- */
+  .may-about { flex-direction: column !important; text-align: center !important; padding: 30px 16px !important; }
+  .may-about .about-overlay { max-width: 100% !important; padding: 20px 16px !important; }
+  .may-about .about-img { width: 100% !important; height: auto !important; }
+  .may-about .about-img div { width: 100% !important; height: 280px !important; }
+  .may-about .about-img div img { width: 100% !important; height: 280px !important; object-fit: cover !important; }
+  .may-about h1, .may-about h2 { font-size: 28px !important; }
+  .may-about p { font-size: 16px !important; }
+
+  /* ---- Achievements ---- */
+  .Achievements-section {
+    grid-template-columns: 1fr 1fr !important;
+    gap: 16px !important;
+    padding: 40px 14px !important;
+    background-attachment: scroll !important;
+  }
+
+  /* ---- WhyUs ---- */
+  .whyus .whyus-container { flex-direction: column !important; text-align: center !important; gap: 20px !important; }
+  .whyus-column { width: 100% !important; }
+  .title-inner .title { font-size: 28px !important; }
+
+  /* ---- Contact ---- */
+  .contact-flow { flex-direction: column !important; align-items: center !important; gap: 24px !important; }
+  .flow-item::after { display: none !important; }
+  .may-contact { padding: 60px 16px !important; background-attachment: scroll !important; }
+
+  /* ---- Gallery ---- */
+  .voice-gallery-img { width: calc(50% - 8px) !important; height: 180px !important; }
+  .voice-gallery-flex { gap: 10px !important; }
+
+  /* ---- Footer ---- */
+  .footer { margin-bottom: 80px !important; padding: 30px 16px !important; }
+  .upper-footer-container { width: 100% !important; grid-template-columns: 1fr 1fr !important; gap: 20px !important; }
+  .logo-and-intro { flex-direction: column !important; }
+  .footer-section { text-align: center !important; }
+  .footer-logo img { margin: 0 auto 15px !important; }
+
+  /* ---- Aside bar ---- */
+  #contactBtn { display: none !important; }
+  #contactContent {
+    width: 100% !important; display: flex !important;
+    flex-direction: row !important; align-items: center !important;
+    justify-content: space-around !important; gap: 10px !important;
+    position: fixed !important; bottom: 0 !important; right: 0 !important;
+    padding: 13px 0 !important;
+    background-color: #222 !important; z-index: 99999 !important;
+  }
+}
+
+/* ----------------------------------------------------------------
+   SMALL MOBILE (≤ 576px)
+   ---------------------------------------------------------------- */
+@media (max-width: 576px) {
+  body { padding-top: 60px; }
+  .main-header { height: 60px !important; padding: 0 12px !important; }
+  .logo { width: 46px !important; height: 46px !important; }
+
+  /* Hero */
+  .hero h1 { font-size: 20px !important; }
+  .hero p  { font-size: 13px !important; }
+  .hero-overlay a { font-size: 13px !important; width: 92% !important; }
+
+  /* Services: single column */
+  .services-section { grid-template-columns: 1fr !important; }
+  .last-serv { grid-template-columns: 1fr !important; }
+  .services-title h2, .services-title h1 { font-size: 22px !important; }
+
+  /* Achievements: keep 2 cols but smaller */
+  .Achievements-section {
+    grid-template-columns: 1fr 1fr !important;
+    padding: 28px 10px !important;
+    gap: 12px !important;
+  }
+  .count-number span { font-size: 24px !important; }
+  .rts-counter-list .text { font-size: 12px !important; }
+
+  /* About */
+  .may-about h1, .may-about h2 { font-size: 24px !important; }
+  .may-about .about-img div { height: 240px !important; }
+  .may-about .about-img div img { height: 240px !important; }
+
+  /* Gallery */
+  .voice-gallery-img { width: calc(50% - 6px) !important; height: 160px !important; }
+  .voice-gallery-section { padding: 44px 10px !important; }
+
+  /* Footer */
+  .footer-bottom, .footer-bottom p { font-size: 12px !important; }
+  .footer-none { display: none !important; }
+  .address-container { width: 100% !important; }
+  .address-container:hover { transform: none !important; }
+}
+
+/* ----------------------------------------------------------------
+   EXTRA SMALL (≤ 380px)
+   ---------------------------------------------------------------- */
+@media (max-width: 380px) {
+  .hero h1 { font-size: 18px !important; }
+  .hero p { font-size: 12px !important; }
+  .company-name { font-size: 12px !important; max-width: 120px !important; }
+  .Achievements-section { grid-template-columns: 1fr !important; }
+}
+
+/* ================================================================
+   IMAGE FIXES — Mobile & Desktop
+   ================================================================ */
+
+/* --- Hero slide backgrounds (fixes background-attachment:fixed on iOS/Android) --- */
+@media (max-width: 900px) {
+  .slide-bg {
+    background-attachment: scroll !important;
+    background-size: cover !important;
+    background-position: center center !important;
+    -webkit-transform: translateZ(0);
+    transform: translateZ(0);
+  }
+  /* Disable zoom animation on mobile to prevent image distortion */
+  .slide.active .slide-bg {
+    animation: none !important;
+  }
+  .slider, .slide {
+    min-height: 56vw;
+  }
+}
+
+/* --- Service card images (.icon-box) — Home page & service pages --- */
+@media (max-width: 900px) {
+  .icon-box {
+    width: 100% !important;
+    height: 200px !important;
+    overflow: hidden !important;
+    border-radius: 10px 10px 0 0 !important;
+  }
+  .icon-box img {
+    width: 100% !important;
+    height: 200px !important;
+    object-fit: cover !important;
+    object-position: center top !important;
+    display: block !important;
+  }
+  .icon-box-2 {
+    width: 100% !important;
+    height: 260px !important;
+    overflow: hidden !important;
+    border-radius: 10px !important;
+  }
+  .icon-box-2 img {
+    width: 100% !important;
+    height: 260px !important;
+    object-fit: cover !important;
+    object-position: center !important;
+    display: block !important;
+  }
+}
+@media (max-width: 576px) {
+  .icon-box, .icon-box img { height: 180px !important; }
+  .icon-box-2, .icon-box-2 img { height: 210px !important; }
+}
+
+/* --- Service detail image (individual service sub-pages) --- */
+@media (max-width: 900px) {
+  .service-detail-img {
+    width: 100% !important;
+    border-radius: 14px !important;
+    overflow: hidden !important;
+  }
+  .service-detail-img img {
+    width: 100% !important;
+    height: auto !important;
+    min-height: 200px !important;
+    max-height: 320px !important;
+    object-fit: cover !important;
+    object-position: center !important;
+    display: block !important;
+  }
+}
+
+/* --- Service full cards (services.html list) --- */
+@media (max-width: 576px) {
+  .service-full-card img {
+    height: 180px !important;
+    object-fit: cover !important;
+    object-position: center !important;
+    width: 100% !important;
+    display: block !important;
+  }
+}
+
+/* --- Achievements background (fixes fixed attachment on mobile) --- */
+@media (max-width: 900px) {
+  .Achievements-section {
+    background-attachment: scroll !important;
+    background-size: cover !important;
+    background-position: center !important;
+  }
+}
+
+/* --- WhyUs image --- */
+@media (max-width: 900px) {
+  .whyus-img { width: 100% !important; overflow: hidden !important; border-radius: 12px !important; }
+  .whyus-img img, .whyus-column img {
+    width: 100% !important;
+    height: auto !important;
+    max-height: 300px !important;
+    object-fit: cover !important;
+    object-position: center !important;
+    display: block !important;
+  }
+}
+
+/* --- Gallery images --- */
+@media (max-width: 576px) {
+  .voice-gallery-img {
+    width: calc(50% - 6px) !important;
+    height: 150px !important;
+    object-fit: cover !important;
+    object-position: center !important;
+    border-radius: 8px !important;
+    display: block !important;
+  }
+}
+@media (max-width: 380px) {
+  .voice-gallery-img { width: 100% !important; height: 180px !important; }
+}
+
+/* --- Global safe baseline --- */
+img { max-width: 100%; height: auto; }
+

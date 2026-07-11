@@ -1,0 +1,227 @@
+@import url('https://fonts.googleapis.com/css2?family=Cairo:wght@400;700&family=Tajawal:wght@400;700&display=swap');
+
+
+body::-webkit-scrollbar {
+    width: 8px
+}
+
+body::-webkit-scrollbar-track {
+    background-color: transparent
+}
+
+body::-webkit-scrollbar-thumb {
+    background-color: var(--lightHelper);
+    background-image: linear-gradient(0deg, var(--lightHelper) 0%, var(--helperColor) 100%);
+    border-radius: 5px
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Cairo', 'Tajawal', sans-serif;
+}
+
+a {
+    text-decoration: none;
+    transition: all 0.5s;
+
+}
+
+ul {
+    list-style: none;
+}
+
+.may-about {
+    display: flex;
+    align-items: center;
+    /* flex-wrap: wrap; */
+    padding: 50px 20px;
+    gap: 20px;
+}
+.sin-ab{
+    margin-top: 100px;
+}
+.may-about .about-overlay {
+    max-width: 50%;
+    text-align: start;
+    line-height: 1.6;
+    padding: 0 80px;
+}
+.may-about .about-img {
+    width: 50%;
+    height: 400px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    
+}
+.may-about .about-img div{
+    width: 70%;
+    height: 400px;
+    display: flex;
+    /* background-color: var(--helperColor); */
+    /* background-image: url("../img/logo-web.png"); */
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center center;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+}
+.may-about .about-img img{
+    width: 100%;
+  
+}
+
+.may-about h1,.may-about h2 {
+    font-size: 40px;
+    margin-bottom: 15px;
+    position: relative;
+    padding-bottom: 8px;
+}
+.may-about h2::after,.may-about h1::after{
+    content: "";
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    width: 20%;
+    height: 3px;
+    background: var(--primaryColor);
+    border-radius: 2px;
+}
+
+.may-about p {
+    font-size: 22px;
+    margin-bottom: 20px;
+}
+
+.veritcal {
+    animation-name: veritcal;
+    animation-timing-function: linear;
+    animation-duration: 9s;
+    animation-iteration-count: infinite;
+    position: absolute;
+    right: 0;
+    top: -150px;
+}
+
+@keyframes veritcal {
+  0% {
+    -webkit-transform: translate3d(0, 0, 0);
+    transform: translate3d(0, 0, 0);
+  }
+  50% {
+    -webkit-transform: translate3d(0, 30px, 0);
+    transform: translate3d(0, 30px, 0);
+  }
+  100% {
+    -webkit-transform: translate3d(0, 0, 0);
+    transform: translate3d(0, 0, 0);
+  }
+}
+
+
+/* -------- Responsive -------- */
+@media (max-width: 992px) {
+    .sin-ab{
+        margin-top: 70px;
+    }
+    .may-about {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .may-about .about-overlay {
+        padding: 70px 20px;
+        max-width: 100%;
+    }
+
+    .may-about .about-img {
+        width: 100%;
+    }
+
+    /* .may-about .about-img div {
+        width: 75%;
+        border-radius: 150px 10px 150px 10px;
+    }
+
+    .may-about .about-img img {
+        border-radius: 150px 10px 150px 10px;
+    } */
+
+    .may-about h2 {
+        font-size: 40px;
+    }
+
+    .may-about p {
+        font-size: 28px;
+    }
+}
+
+@media (max-width: 576px) {
+    .may-about {
+        padding: 30px 10px;
+        gap: 0;
+    }
+
+    .may-about .about-img  {
+        width: 100%;
+        height: 340px;
+    }
+    .may-about .about-img div {
+        width: 100%;
+        height: 300px;
+        /* border-radius: 150px 10px 150px 10px; */
+    }
+    .may-about .about-img div img{
+        width: 100%;
+        height: 300px;
+        /* border-radius: 150px 10px 150px 10px; */
+    }
+    .may-about h2 {
+        font-size: 34px;
+    }
+
+    .may-about p {
+        font-size: 16px;
+    }
+}
+
+.licenses-section {
+  margin-top: 10px;
+  text-align: center;
+}
+
+.licenses-section h3 {
+  font-size: 24px;
+  margin-bottom: 20px;
+  font-weight: 600;
+}
+
+.licenses-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 15px;
+}
+
+.license-main img {
+  width: 350px;
+  height: auto;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+}
+
+.license-sub {
+  display: flex;
+  gap: 20px;
+  justify-content: center;
+}
+
+.license-sub img {
+  width: 170px;
+  height: auto;
+  border-radius: 6px;
+  box-shadow: 0 3px 6px rgba(0,0,0,0.1);
+}
